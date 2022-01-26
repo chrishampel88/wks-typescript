@@ -1,6 +1,6 @@
 class Person {
-    protected name: string;
-    protected age: number;
+    name: string;
+    age: number;
     //private mail: string;
     constructor(name: string, age: number) {
       this.name = name;
@@ -9,7 +9,7 @@ class Person {
   }
   
   class Student extends Person {
-    private regular: boolean;
+  regular: boolean;
     
     constructor(name: string, age: number, regular: boolean) {
       super(name, age);
@@ -29,4 +29,8 @@ class Person {
   student.regular; // Property 'regular' is private and only accessible within class 'Student'
 
 //proba como cambiar los modificadores de atributos de la clase!
+
+// si no tiene nada es publico y puede ser llamad en cualquier lado
+//si es protected puede ser llamad dentro de su clase o sus hijos
+//si es privated puede ser llamado unicamente en donde fue definido
   export {}
